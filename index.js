@@ -13,7 +13,7 @@ const app = express();
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 
-app.use('/dishes', dishRouter);
+app.use('/dishes', dishRouter); //ROUTERS
 
 app.get('/dishes/:dishId',(req, res, next)=>{
     res.end("this will send details of dish: "+req.params.dishId);
